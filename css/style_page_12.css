@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Imbue:opsz,wght@10..100,100..900&family=Lexend:wght@100..900&family=Lilita+One&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+        "text images";
+}
+
+.header {
+    position: absolute;
+    grid-area: text;
+    margin-top: 3vw;
+    margin-left: 5vw;
+
+    .title {
+        font-size: 3.2vw;
+
+    }
+
+    .main-text {
+        overflow:visible;
+
+        margin-top: 2vw;
+        font-size: 1.7vw;
+    }
+
+    .button {
+        margin-top: 2vw;
+        button {
+            font-size: 1.8vw;
+            padding: 15px 4.6vh;
+            border-radius: 40px;
+            background-color: #2f2f2f;
+            color: #fff;
+        }
+    }
+}
+
+.image-section {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    min-height: 92vh;
+    gap: 2rem;
+    margin-top: 4vw;
+    justify-content: flex-end;
+    min-width: 70vw;
+    img {
+        width: 20vw;
+        height: 25vw;
+        border-radius: 40px;
+    }
+
+    .profile-image {
+        width: 6.25vw;
+        height: 6.5vw;
+        border-radius: 50%;
+    }
+
+    .left-image {
+        align-self: flex-end;
+    }
+
+    .middle-image {
+        align-self: center;
+        position: relative;
+        bottom: 2vw;
+    }
+
+    .right-image {
+        position: relative;
+        bottom: 2vw;
+    }
+
+    .card {
+        position: absolute;
+        top: 33rem; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        right: 5.5rem;
+        gap: 1.5rem;
+        height: 20rem;
+
+        .card-text {
+            font-size: 1.3vw;
+        }
+
+    }
+}
+
+.decoration-images {
+    position: absolute;
+}
+
+.spiral {
+    top: 34vw;
+    left: 8vw;
+
+    img {
+        width: 11.5vw;
+    }
+}
+
+.wave {
+    left: 35vw;
+    top: 2vw;
+
+    img {
+        width: 27vw;
+    }
+}
+
+.dawn1 {
+    left: 45vw;
+    z-index: 1;
+    bottom: 20rem;
+
+    img {
+        width: 15vw;
+    }
+}
+
+.dawn2 {
+    right: 6vw;
+    bottom: 14rem;
+
+    img {
+        width: 19vw;
+    }
+
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1000px) {
+
+    .header {
+        .title {
+            font-size: 3.5vw;
+        }
+
+        .main-text {
+            font-size: 1.6vw;
+        }
+    }
+    .image-section {
+        min-height: 50vw;
+        min-width: 100vh;
+        img {
+            width: 18vw;
+            height: 25vw;
+        }
+
+        .card {
+            top: 30rem;
+            right: 7rem;
+        }
+    }
+    
+    .spiral {
+        left: 8vw;
+        top: 35vw;
+
+        img {
+            width: 10vw;
+        }
+    }
+
+    .dawn1 {
+        left: 34.6rem;
+        top: 23vw;
+
+        img {
+            width: 14vw;
+        }
+    }
+
+    .dawn2 {
+        right: 10vw;
+        bottom: 15vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+
+    .layout {
+        display: grid;
+        grid-template-areas: 
+            "text"
+            "images"
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        position: unset;
+        grid-area: text;
+        text-align: center;
+        margin: 2rem 0 0 0;
+        z-index: 2;
+
+        .title {
+            font-size: 7vw;
+        }
+
+        .main-text {
+            font-size: 4.2vw;
+            margin: 1rem 2rem 0 2rem;
+        }
+
+        .button {
+            margin-top: 1rem;
+            button {
+                font-size: 3vw;
+            }
+        }
+    }
+
+  
+
+   .image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem 0 0 0;
+        position: unset;
+        grid-area: images;
+        width: 100%;
+        height: 100%;
+
+        .left-image {
+            align-self: center;
+            position: unset;
+        }
+
+        img {
+            width: 60vw;
+            position: unset;
+            height: 70vw;
+        }
+        .card {
+            position: unset;
+            width: fit-content;
+            height: fit-content;
+            margin: 1rem 2rem 0 2rem;
+            .profile-image {
+                width: 20vw;
+                height: 20vw;
+            }
+
+            .card-text {
+                font-size: 3vw;
+            }
+        }
+   }
+
+   .spiral {
+        bottom: 0;
+        top: 9vw;
+
+        img {
+            width: 17vw;
+        }
+   }
+
+   .dawn2 {
+        bottom: 0;
+        top: 11vw;
+        right: 2vw;
+
+        img {
+            width: 30vw;
+        }
+
+   }
+
+   .dawn1 {
+
+        img {
+            width: 29vw;
+        }
+
+        top: 67vw;
+        left: 36vw;
+        z-index: -1;
+        opacity: 50%;
+   }
+
+   .wave {
+       display: none;
+   }
+}

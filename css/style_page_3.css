@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 4rem;
+    gap: 10rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.text {
+    font-size: 2.5rem;
+    color:#333333
+}
+
+.image {
+    margin-top: 5rem;
+   
+}
+
+.text button {
+    margin-top: 1rem;
+    padding: 12px 1.6rem 12px 1.6rem;
+    border-radius: 16px;
+    color: #fff;
+    background-color: #333333;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.image {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    height: 63vh;
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+        width: 63vw;
+    }
+    
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1500px) {
+    .header {
+        gap: 3rem;
+
+    }
+
+    .header h1 {
+        font-size: 4rem;
+    }
+
+    .header p {
+        font-size: 2rem;
+    }
+
+    .header button {
+        font-size: 1rem;
+    }
+
+    .image {
+        height: 30vw;
+
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1010px) {
+    .header p {
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .header button {
+       margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .header {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1.4rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .header button {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .image {
+        margin-top: 2rem;
+        height: 13rem;
+
+        img {
+            margin-right: 2rem;
+            margin-left: 2rem;
+            max-width: 100% ;
+            max-height: 100%;
+        }
+    }
+    
+}

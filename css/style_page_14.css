@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Imbue:opsz,wght@10..100,100..900&family=Lexend:wght@100..900&family=Lilita+One&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+.full-images {
+    display: none;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "text images";
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+    .title {
+        font-size: 4vw;
+    }
+
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 12vh;
+    margin-left: 6rem;
+    
+
+    .yellow-square {
+        img {
+            width: 27vw;
+        }
+    }
+
+    .brown-square, .mobile, .star-1, .star-2, .heart, .sun, .black-star {
+        position: absolute;
+        
+    }
+
+    .brown-square {
+        z-index: -5;
+        right: 7vw;
+        top: 9vw;
+
+        img {
+            width: 35vw;
+        }
+    }
+
+    .mobile {
+        top: 19vw;
+        right: 15vw;
+
+        img {
+            width: 32vw;
+        }
+
+        z-index: 1;
+    }
+
+    .heart {
+        right: 23vw;
+        top: 18vw;
+
+        img {
+            width: 15vw;
+        }
+    }
+
+    .sun {
+        right: 6vw;
+        top: 40vw;
+        img {
+            width: 10vw;
+        }
+    }
+
+    .star-1 {
+        right: 18vw;
+
+        img {
+            width: 8vw;
+        }
+    }
+
+    .star-2 {
+        right: 9.7vw;
+        top: 18vw;
+
+        img {
+            width: 8vw;
+        }
+    }
+
+    .black-star {
+        top: 2vw;
+        right: 39vw;
+    }
+}
+
+.left-section {
+    margin-left: 6rem;
+    display: flex;
+
+    .main-text {
+        margin-top: 2rem;
+        font-size: 3vh;
+    }
+
+    hr {
+        width: 20%;
+    }
+
+   
+    button {
+        padding: 15px 2rem;
+        font-size: 1vw;
+        margin-top: 2rem;
+        border-radius: 27px;
+        background-color: rgb(233, 233, 113);
+        border: none;
+        cursor: pointer
+    }
+
+    .footer {
+        display: flex;
+        justify-self: flex-end;
+        background-color: #2f2f2f;
+        height: 12vw;
+        border-radius: 30px;
+        margin-top: 8rem;
+        align-items: center;
+        justify-content: space-around;
+        color: #fff;
+
+        .number {
+            font-size: 2vw;
+        }
+
+       .card {
+            hr {
+                width: 50%;
+                margin-top: 1rem;
+                height: 3px;
+                background-color: #fff;
+            }
+
+            .card-text {
+                font-size: 1.5vw;
+                margin-top: 1rem;
+            }
+       }
+    
+    }
+    
+}
+
+@media screen and (max-width: 1366px) and (min-width: 950px) {
+    * {
+        font-size: calc(100% - 15%);
+    }
+
+    .right-section {
+        .yellow-square, .heart, .mobile, .brown-square, .sun, .star1, .star2, .black-star {
+            img {
+                width: calc(100% - 30%)
+            }
+        }
+
+        .yellow-square {
+            width: 34vw;
+        }
+
+        .heart { 
+            width: 20vw;
+            right: 18vw;
+        }
+
+        .brown-square {
+            width: 47vw;
+            right: -4vw;
+        }
+
+        .mobile {
+            width: 40vw;
+            right: 6.6vw;
+            top: 21vw;
+        }
+
+        .star-1 {
+            width: 10vw;
+            right: 20vw;
+        }
+
+        .star-2 {
+            width: 17vw;
+            right: 3vw;
+        }
+
+        .black-star {
+            width: 15vw;
+            right: 34vw;
+        }
+        
+    }
+
+    .left-section {
+        .footer {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .layout {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .left-section {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 3rem;
+        
+        .footer {
+            align-self: center;
+            margin-top: 2rem;
+            width: 30rem;
+            text-align: left;
+        }
+    }
+
+    .right-section {
+        margin: 5rem 0 0 0;
+        align-self: center;
+      
+
+        .brown-square, .star-1, .star-2, .mobile, .yellow-square, .black-star, .sun, .heart {
+            display: none;
+        }
+
+        .full-image-article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .full-images {
+                display: flex;
+                width: 70vw;
+            }
+        }
+    }
+
+
+}

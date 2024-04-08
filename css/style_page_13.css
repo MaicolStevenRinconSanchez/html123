@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Imbue:opsz,wght@10..100,100..900&family=Lexend:wght@100..900&family=Lilita+One&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+
+img {
+  width: 80%;
+}
+
+
+
+.lay-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-decor {
+  display: flex;
+}
+
+.left-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7rem;
+}
+
+.right-image {
+    display: flex;
+    justify-content: center;
+}
+
+.text-container {
+  padding: 25px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background-image: url("../sources/sources_page_13/text-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.right-image {
+  width: 100%;
+}
+
+.title {
+  font-size: 10vw;
+  text-align: center;
+  background: transparent;
+}
+
+
+
+.number {
+  margin-left: 7%;
+  font-weight: 700;
+  color: #717171;
+}
+
+.text-container {
+    p {
+        font-size: 1.6vw;
+        text-align: center;
+        background: transparent;
+    }
+}
+
+button {
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #252525;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 2vw;
+  margin-top: 2rem;
+}
+
+@media (min-width: 950px) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .lay-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-decor {
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .spike {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    z-index: 2;
+    top: 20%;
+  }
+
+  .star {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    height: 120%;
+    top: 35%;
+    left: 20%;
+  }
+
+  .star-2 {
+    width: 40%;
+    height: 110%;
+    position: relative;
+    z-index: 2;
+    bottom: 35%;
+    right: 18%;
+  }
+
+  .sun {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    height: 80%;
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .text-container {
+    height: 500%;
+    justify-content: center;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 4.5rem;
+  }
+
+  .number {
+    margin-left: 0;
+  }
+
+  .text {
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 950px) {
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spike, .sun, .star, .star-2 {
+        display: none;
+    }
+
+    .left-text, .right-text{
+        text-align: center;
+        justify-self: center;
+        margin-top: 2rem;
+        
+        .number {
+            font-size: 6vw;
+        }
+
+        .text {
+            font-size: 4vw;
+        }
+        
+    }
+
+    .text-container {
+        p {
+            font-size: 5vw;
+        }
+
+        button {
+            font-size: 5vw;
+        }
+    }
+}

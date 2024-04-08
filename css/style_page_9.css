@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lora", sans-serif;
+}
+  
+body {
+    background: rgb(214, 214, 214);
+    background: linear-gradient( 90deg, #d6d6d6 0%, #9ba6a6 100%);
+    color: #363830;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: nowrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 25px auto;
+}
+.item.header {
+
+    h1 {
+        color: #363830;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        width: 80%;
+        text-align: justify;
+    }
+}
+
+button {
+    text-align: center;
+    text-decoration: none;
+    background-color: #363830;
+    color: white;
+    padding: 6px 25px;
+    border-radius: 35px;
+}
+
+img {
+    width: 80%;
+    height: 100%;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+    height: 20rem;
+    background-color: #e0e0e089;
+    padding: 35px;
+    border-radius: 10rem;
+    gap: 20px;
+    position: relative;
+    right: 20rem;
+    top: 10rem;
+
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.number {
+    width: min-content;
+    font-size: 1.5rem;
+}
+
+hr {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #363830;
+    width: 30px;
+    height: 3px;
+}
+
+.sub-text {
+    margin-top: 1rem;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.left-info {
+    margin-left: 5rem;
+}
+
+.right-info {
+    margin-right: 7rem;
+}
+
+@media (min-width: 930px) {
+    .layout {
+            grid-template-columns: repeat(2, 1fr);
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+    }
+
+    .item {
+        margin: 0 auto;
+    }
+
+    .item.header {
+        justify-content: center;
+        align-items: start;
+        z-index: 3;
+        position: relative;
+        left: 280px;
+        
+        h1 {
+            font-size: 4.6rem;
+        }
+    
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+
+    button {
+        padding: 10px 40px;
+    }
+
+    .info-container {
+        flex-direction: row;
+        width: 110%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 150px;
+        position: absolute;
+
+        left: 2rem;
+    }
+
+    .info {
+        width: 33.3%;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width: 1370px) and (min-width: 930px) {
+    .bottom-container { 
+        width: 40rem;
+        height: 15rem;
+        padding: 0;
+        right: 10rem;
+        bottom: 10rem;
+        top: 6rem;
+
+        .info {
+            top: 0;
+            margin-top: 0;
+            padding-top: 0;
+            position: relative;
+            bottom: 20rem;
+            height: 100%;
+        }
+        .sub-text {
+            font-size: 0.7rem;
+            margin-top: 0;
+        }
+
+        .number {
+            font-size: 1rem;
+        }
+
+        .left-info {
+            margin-left: 0;
+        }
+
+        .right-info {
+            margin-right: 0;
+        }
+    }
+
+    .item.header {
+        justify-self: flex-start;
+        width: 100%;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+}
+
+@media screen and (max-width: 930px) {
+    .item.header {
+        p {
+            text-align: center;
+        }
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bottom-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        top: 15rem;
+        left: 0;
+        border: none;
+        background-color: inherit;
+        width: 100%;
+
+        .info {
+            position: relative;
+            left: 0;
+            right: 10rem;
+            margin-right: 0;
+            margin-left: 0;
+            text-align: center;
+            
+            p {
+                text-align: center;
+            }
+        }
+        
+        .right-info {
+            margin-right: 0;
+        }
+        
+        .left-info {
+            margin-left: 0;
+        }
+    }
+}

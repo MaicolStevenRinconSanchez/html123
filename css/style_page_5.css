@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;  
+}
+
+.header {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    font-size: 4rem;
+}
+
+.gallery_layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    gap: 4rem;
+
+    p {
+        font-size: 1.65rem;
+        color: rgb(94, 94, 94);
+    }
+
+    p:first-of-type {
+        font-size: 2.5rem;
+        color: rgb(148, 145, 145)
+    }
+
+
+}
+
+.gallery_layout img {
+    margin-top: 2rem;
+    width: 400px;
+    height: 345px;
+}
+
+@media screen and (max-width: 1020px) {
+    .header {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .gallery_layout {
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 5rem;
+
+        p:nth-of-type(2) {
+            margin-top: 1rem;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1486px) {
+    .gallery_layout {
+
+        margin-top: 5rem;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+
+        .third_card {
+            align-self: center;
+            justify-self: center;
+        }
+
+    }
+
+    .header {
+        text-align: center;
+        margin-left: 0;
+    }
+}
